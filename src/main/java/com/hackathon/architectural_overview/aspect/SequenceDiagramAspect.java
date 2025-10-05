@@ -15,7 +15,7 @@ import java.util.*;
 public class SequenceDiagramAspect {
     private final ThreadLocal<List<String>> traceLog = ThreadLocal.withInitial(ArrayList::new);
 
-    @Pointcut("within(com.hackathon.architectural_overview.service.*)")
+    @Pointcut("within(com.hackathon.architectural_overview..*)")
     public void springComponents() {}
 
     @Around("springComponents()")
